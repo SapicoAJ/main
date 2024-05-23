@@ -2,32 +2,59 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge"
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+   <title>Register Now</title>
+ <link rel="stylesheet" href="style.css">
 </head>
-<link rel="stylesheet" href="style.css">
+
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">PROFILE</a></li>
-            <li><a href="About Me.html">ABOUT ME</a></li>
-            <lI><a href="img.html">IMAGES</a></lI>
-        </ul>
-    </nav>
-    <div class="container">
-        <img src="me.jpg.jpg" alt="avif">
-        <h1> Sapico, Allen Joy</h1>
-        <h2> BSBA Major in Marketing Management</h2>
-        <a href="hhtps://www.facebook.com/SapicoAj?mibextid=ZbWKwL">
-            <img src="fbko.jpg.jpg">
-        </a>
-        <a href="https://www.instagram.com/joy_sapico?igsh=MWVqZ3ROcW55MTNiZQ==">
-        <img src="IG.JPG.jpg">
-        </a>
-        <a href="https://www.tiktok.com/@_as2510?_t=8krObNxpgj2&_r=1">
-        <img src="tiktok.jpg.png">
-        </a>
-        <h3>Check Me out</h3>
-    </div> 
+    
+    <section class="contact">
+        <h2>Contact Me</h2>
+
+        <form action="#">
+            <div class="input-box">
+                <div class="input-field field">
+                    <input type="text" placeholder="Full Name" id="name"
+                     class="item" autocomplete="off">
+                     <div class="error-txt">Full Name can't be blank</div>
+                </div>
+                <div class="input-field field">
+                    <input type="text" placeholder="Email Address" id="email"
+                     class="item" autocomplete="off">
+                     <div class="error-txt email">Email Address can't be blank</div>
+                </div>
+            </div>
+
+            <div class="input-box">
+                <div class="input-field field">
+                    <input type="text" placeholder="Phone Number" id="phone"
+                     class="item" autocomplete="off">
+                     <div class="error-txt">Phone Number can't be blank</div>
+                </div>
+                <div class="input-field field">
+                    <input type="text" placeholder="Subject" id="subject"
+                     class="item" autocomplete="off">
+                     <div class="error-txt">Subject can't be blank</div>
+                    </div>
+                </div>
+
+                     <div class="textarea-field field">
+                        <textarea name="" id="message" cols="30" rows="10"
+                            placeholder="Your message" class="item"
+                        autocomplete="off"></textarea>
+                        <div class="error-txt">Message can't be blank</div>
+                     </div>
+
+                     <button type="submit">Send Mesage</button>
+        </form>
+    </section>
+
+
+    <script src="https://smtpjs.com/v3/smtp.js"> </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
