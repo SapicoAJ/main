@@ -1,95 +1,113 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family:'Poppins', sans-serif;
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: serif;
 }
 
 body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: #1f242d;
+	background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(bg.jpeg);
+	width: 100%;
+	background-size: 100%;
+	background-repeat: no-repeat;
+    background-position: center;
+	display: flex;
+	height: 160vh;
+	justify-content: center;
+	align-items: center;
+	background-position: center;
+	padding-left: 10px;
+	font-size: 20px;
 }
 
-.contact h2 {
-    font-size: 40px;
-    color: #ededed;
-    text-align: center;
-    margin-bottom: 10px;
+.container{
+	max-width: 700px;
+	width: 100%;
+	background: white;
+	padding:25px 30px;
+	border-radius: 10px;
+}
+.container .title{
+	font-size: 25px;
+	font-weight: 1000;
+	position: relative;
 }
 
-.contact form {
-    width: 600;
-    text-align: center;
+.container .title:before{
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 3px;
+	width: 70px;
+	background: blue;
 }
 
-form .input-box{
-    display: flex;
-    justify-content: space-between;
+.container form .user-details{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 20px 0 12px 0;
 }
 
-.input-box .input-field {
-    width: 48.5%;
+form .user-details .input-box{
+	margin-bottom: 10px;
+	width: calc(100% / 2 - 20px);
 }
+.user-details .input-box .details{
+	font-weight: 500;
+	margin-bottom: 5px;
+	display: block;
+}
+.user-details .input-box input,
+.user-details .custom_select select
+{
+	height: 30px;
+	width: 100%;
+	outline: none;
+	border-radius: 4px;
+	border: 1px solid;
+	padding-left: 20px;
+	font-size: 15px;
+	border-bottom-width: 4px;
+	transition:all 0.3s ease;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+	border-color: green;
+}
+form .button{
+	height: 45px;
+	margin: 20px 0;
+}
+form .button input{
+	height: 70%;
+	width: 100%;
+	outline: none;
+	color: black;
+	background: lightgreen;
+	font-size: 18px;
+	font-weight: 500px;
+	text-align: center;
+	letter-spacing: 5px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+form .button input:hover{
+	background: green;
+	color: white;
+	border: 2px solid;
+}
+ form .user-details .input-box{
+ 	margin-bottom: 10px;
+ 	width: 100%;
+ }
 
-.field .item {
-    width: 100%;
-    padding: 18px;
-    background: transparent;
-    border: 2px solid #0ef;
-    outline: none;
-    border-radius: 6px;
-    font-size: 16px;
-    color: #ededed;
-    margin: 12px 0;
-}
+ .container form .user-details{
+ 	max-height: 900px;
+ 	overflow-y: scroll;
+ }
+ .user-details::-webkit-scrollbar{
+ 	width: 0;
+ }
 
-.field.error .item {
-    border-color: #d93025;
-}
-
-.field .item::placeholder {
-    color: rgba(225, 225, 225, .3);
-}
-
-.field .error-text {
-    font-size: 14.5px;
-    color: #d93025;
-    text-align: left;
-    margin: -5px 0 10px;
-    display: none;
-}
-
-.field.error .error-text {
-    display: block;
-}
-form.textarea-field .item {
-    resize: none;
-}
-
-form .textarea-field .item {
-    margin-top: -10px;
-}
-form button {
-    padding: 12px 32px;
-    background: #0ef;
-    border: none;
-    outline: none;
-    border-radius: 6px;
-    box-shadow: 0 0 10px #0ef;
-    font-size: 16px;
-    color: #333;
-    letter-spacing: 1px;
-    font-weight: 600;
-    cursor: pointer;
-    margin-top: 20px;
-    transition: 5s;
-}
-
-form button:hover {
-    box-shadow: none;
-}
